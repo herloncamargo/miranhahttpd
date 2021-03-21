@@ -1,0 +1,70 @@
+/*** PF4 overrides ***/
+
+/* WORKAROUND: Navigation problems with Tertiary Nav widget on mobile */
+/* See: https://github.com/patternfly/patternfly-design/issues/840 */
+/* Helper mod to wrap pf-c-nav__tertiary */
+.ct-m-nav__tertiary-wrap {
+    .pf-c-nav__list {
+        flex-wrap: wrap;
+    }
+
+    .pf-c-nav__scroll-button {
+        display: none;
+    }
+}
+
+/* Helper mod to center pf-c-nav__tertiary when it wraps */
+.ct-m-nav__tertiary-center {
+    .pf-c-nav__list {
+        justify-content: center;
+    }
+}
+
+ul.pf-c-select__menu {
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+/* All SVGs used in PF4 have some inline style to align them
+ * https://github.com/patternfly/patternfly-react/issues/4767
+ */
+svg {
+    vertical-align: -0.125em;
+}
+
+// Patternfly horizontal lists should convert to vertical in small screens https://github.com/patternfly/patternfly-react/issues/4777
+@media (min-width: 640px) {
+    .pf-c-description-list {
+        --pf-c-description-list__group--GridTemplateColumns: var(--pf-c-description-list--m-horizontal__group--GridTemplateColumns);
+    }
+}
+
+// When using horizontal ruler inside description list it's just for the spacing - don't show it
+.pf-c-description-list {
+    // The default gap between the rows is too large
+    --pf-c-description-list--RowGap: 1rem;
+
+    > hr {
+        border-top: none;
+    }
+}
+
+.pf-c-modal-box.pf-m-align-top {
+    // We utilize custom footers in dialogs
+    // Make sure that the buttons always appear in the next line from the inline alerts
+    .pf-c-modal-box__footer {
+        flex-wrap: wrap;
+        gap: var(--pf-global--spacer--sm);
+
+        > div:not(.pf-c-button):not(.dialog-wait-ct) {
+            flex: 0 0 100%;
+        }
+    }
+}
+
+.pf-c-card__header {
+  // Allow actions to wrap if there's not enough space
+  // issue: https://github.com/patternfly/patternfly/issues/3713
+  // upstream fix (pending): https://github.com/patternfly/patternfly/pull/3714
+  flex-wrap: wrap;
+}

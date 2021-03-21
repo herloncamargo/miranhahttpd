@@ -1,0 +1,4 @@
+.pf-c-modal-box__body .scroll {
+    max-height: calc(75vh - 10rem);
+    overflow: auto;
+}

@@ -1,0 +1,59 @@
+#form{
+  display: flex;
+  justify-content: center;
+}
+
+#form-container{
+  display: block;
+  width: 70vw;
+
+  form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+  }
+
+  input {
+    height: 40px;
+    min-width: 80%;
+  }
+
+  span {
+    display: block;
+    color: #BBBBBB;
+  }
+
+  h3 {
+    font-weight: bold;
+  }
+
+  select {
+    height: 40px;
+    margin-top: 8px;
+    min-width: 300px;
+  }
+
+  #list-options{
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+  }
+
+  #button-container{
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    
+    button {
+      font-weight: bold;
+      margin: 40px 10px 40px 0;
+      border-radius: 5px;
+    }
+  }
+
+}

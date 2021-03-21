@@ -1,0 +1,66 @@
+#host-item-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  padding: 0 60px;
+  margin-bottom: 16px;
+
+  h3 { 
+    font-weight: bold;
+    color: #aaa;
+  }
+
+  #vhost, #port, #actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #port{
+    align-items: center;
+  }
+
+  #actions {
+    align-items: flex-end;
+
+    #icons{
+      display: flex;
+     
+      a {
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 45px;
+          width: 45px;
+          border-radius: 50%;
+          background-color: #ddd;
+          margin: 4px 8px;
+  
+          svg{
+            color: #aaa;
+          }
+  
+          :hover {
+            svg {
+              color: #0066cc;
+            }
+          }
+        }
+      }
+    }
+   
+  }
+}
+
+.align-left {
+  text-align: left;
+  font-weight: bold;
+}
+
+.swal-wide{
+  width:850px !important;
+}
